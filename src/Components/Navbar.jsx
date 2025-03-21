@@ -10,9 +10,13 @@ const Navbar = () => {
             <a className='hover:font-bold' href='#'>Home</a>
             <a className='hover:font-bold' href='#'>Contact</a>
             <a className='hover:font-bold' href='#'>About</a>
-            <a className='hover:font-bold' href='#'>Pass</a>
+          
         </li>
        </ul>
+       <button className='text-white my-5 flex justify-center items-center'>
+        <img className='invert w-12 p-1' src="/public/icons/github.svg" alt="github" />
+         <span className="font-bold px-1">GitHub</span>
+       </button>
        </div>
     </nav>
   )
