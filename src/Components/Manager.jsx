@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import {v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Manager = () => {
   const [Form, setForm] = useState({ site: "", username: "", pass: "" });
@@ -37,36 +37,37 @@ const Manager = () => {
 
     console.log(updatedPassArr);
 
-    setForm({ site: "", username: "", pass: "" })
-};
+    setForm({ site: "", username: "", pass: "" });
+  };
 
-const DltPass = (id) => {
-  console.log("Deleting password with id ", id)
-  let c = confirm("Sahi Mei Delete Kardu Na???")
-  if(c){
-      setPassArr(PassArr.filter(item=>item.id!==id))
-      localStorage.setItem("passwords", JSON.stringify(PassArr.filter(item=>item.id!==id))) 
-      toast('Kar Diya Deleteee!', {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
+  const DltPass = (id) => {
+    console.log("Deleting password with id ", id);
+    let c = confirm("Sahi Mei Delete Kardu Na???");
+    if (c) {
+      setPassArr(PassArr.filter((item) => item.id !== id));
+      localStorage.setItem(
+        "passwords",
+        JSON.stringify(PassArr.filter((item) => item.id !== id))
+      );
+      toast("Kar Diya Deleteee!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
       });
-  }
-      
-}
-
-     const EditPass = (id) => {
-        console.log("Editing password with id ", id)
-        setForm(passwordArray.filter(i=>i.id===id)[0]) 
-        setPassArr(passwordArray.filter(item=>item.id!==id)) 
-
     }
-  
+  };
+
+  const EditPass = (id) => {
+    console.log("Editing password with id ", id);
+    setForm(PassArr.filter((i) => i.id === id)[0]);
+    setPassArr(PassArr.filter((item) => item.id !== id));
+  };
+
   const handleChange = (e) => {
     setForm({ ...Form, [e.target.name]: e.target.value });
   };
@@ -83,7 +84,7 @@ const DltPass = (id) => {
       theme: "dark",
     });
     navigator.clipboard.writeText(text);
-  }
+  };
 
   return (
     <>
@@ -99,9 +100,8 @@ const DltPass = (id) => {
         pauseOnHover
         theme="dark"
       />
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-
-      <div className=" bg-slate-100 mycontainer">
+    <div className="px-5 pt-14">
+      <div className="manager bg-slate-100 mycontainer rounded-md max-w-6xl mx-auto">
         <h1 className="text-center font-bold tracking-wide text-[#840cca] text-4xl">
           Lock
           <span className="text-[#16052a] text-[gradient-to-br from-[#840cca] to-[#4514a0]]">
@@ -292,6 +292,7 @@ const DltPass = (id) => {
           )}
         </div>
       </div>
+    </div>
     </>
   );
 };
