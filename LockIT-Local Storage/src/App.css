@@ -1,0 +1,17 @@
+/* Global styles for icons and images */
+lord-icon {
+  width: 25px !important;
+  height: 25px !important;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Specific styles for the eye icon */
+.relative img {
+  width: 46px;
+  height: auto;
+}

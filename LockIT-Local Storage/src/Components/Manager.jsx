@@ -178,6 +178,7 @@ const Manager = () => {
             <lord-icon
               src="https://cdn.lordicon.com/jgnvfzqg.json"
               trigger="hover"
+              style={{ width: "25px", height: "25px" }}
             ></lord-icon>
             Save
           </button>
