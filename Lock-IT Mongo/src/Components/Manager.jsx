@@ -279,7 +279,7 @@ const Manager = () => {
                         </td>
                         <td className="py-1 sm:py-2 border border-white text-center px-1 sm:px-2 truncate max-w-[80px] sm:max-w-none">
                           <div className="flex items-center justify-center">
-                            <span className="truncate">{item.pass}</span>
+                            <span className="truncate">{"*".repeat(item.pass.length)}</span>
                             <div
                               className="lordiconcopy size-7 cursor-pointer hidden md:block"
                               onClick={() => {
