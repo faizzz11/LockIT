@@ -67,7 +67,6 @@ nodemon server.js
 ---
 
 ## 📸 Preview
-![LockIT Password Manager Preview](https://your-image-url.com)
 ![alt text](<preview.png>)
 
 ---
