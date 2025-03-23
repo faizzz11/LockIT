@@ -113,7 +113,7 @@ const Manager = () => {
       />
     <div className="px-5 pt-14 mb-25">
       <div className="manager bg-purple-50 mycontainer rounded-md max-w-6xl mx-auto p-4 md:p-6 lg:p-8">
-        <h1 className="text-center font-bold tracking-wide text-[#840cca] text-2xl sm:text-3xl md:text-4xl">
+        <h1 className="text-center font-bold font-[McLaren] tracking-wide text-[#840cca] text-2xl sm:text-3xl md:text-4xl">
           Lock
           <span className="text-[#16052a] text-[gradient-to-br from-[#840cca] to-[#4514a0]]">
             IT
@@ -173,7 +173,7 @@ const Manager = () => {
 
           <button
             onClick={savePass}
-            className="flex hover:text-white justify-center items-center hover:bg-purple-600 gap-2 px-6 sm:px-8 py-1 sm:py-2 w-fit rounded-full bg-[#840cca] cursor-pointer border-[2px] border-purple-900"
+            className="flex hover:text-white font-[Mclaren] text-lg justify-center items-center hover:bg-purple-600 gap-2 px-6 sm:px-8 py-1 sm:py-2 w-fit rounded-full bg-[#840cca] cursor-pointer border-[2px] border-purple-900"
           >
             <lord-icon
               src="https://cdn.lordicon.com/jgnvfzqg.json"
